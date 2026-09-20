@@ -29,6 +29,16 @@ $godot = [Environment]::GetEnvironmentVariable('GODOT_ENGINE', 'Machine')
 python -m pytest tests
 ```
 
+## Deploy Web
+
+O workflow `.github/workflows/deploy-pages.yml` exporta o projeto para Godot Web e publica automaticamente no GitHub Pages a cada push em `main`.
+
+Após o primeiro workflow concluído, a URL esperada será:
+
+```text
+https://<usuario>.github.io/<repositorio>/
+```
+
 Se Godot 4 estiver disponível no PATH:
 
 ```powershell
