@@ -28,7 +28,7 @@ func _process(delta: float) -> void:
 	player.y = clamp(player.y, ARENA.position.y + 18.0, ARENA.end.y - 18.0)
 	if player.distance_to(target) < 28.0:
 		score += 1
-		level = 1 + score / 5
+		level = 1 + int(float(score) / 5.0)
 		feedback = "Great! Pulse collected. Level %d — keep the loop going." % level
 		target = _new_target()
 		time_left = min(ROUND_LENGTH, time_left + 1.5)

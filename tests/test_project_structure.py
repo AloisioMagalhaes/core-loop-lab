@@ -11,7 +11,7 @@ def test_godot_vertical_slice_files_exist():
 
 def test_core_loop_signals_are_present():
     code = (ROOT / "main.gd").read_text(encoding="utf-8")
-    for signal in ("Input.get_vector", "score += 1", "level = 1 + score / 5", "time_left", "restart"):
+    for signal in ("Input.get_vector", "score += 1", "level = 1 + int(float(score) / 5.0)", "time_left", "restart"):
         assert signal in code, signal
 
 
